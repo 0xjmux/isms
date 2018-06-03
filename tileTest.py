@@ -9,6 +9,9 @@ class MapTile:
 
     def modify_player(self, player):
         pass
+###VARIABLE DECLARATION FOR CUSTOM OUTCOMES
+visited_gallows = False
+
 
 class startTile(MapTile):
     def intro_text(self):
@@ -23,23 +26,31 @@ class puritanVillage(MapTile):
 
 class deadEnd(MapTile):
     def intro_text(self):
-        return """"""
+        return """Oops. You've run into a dead end. Looks like there's nowhere to go here. """
 
 class gallows(MapTile):
     def intro_text(self):
-        return """"""
+        visited_gallows = True
+        return """As you walk out of the outskirts of the village, you approach a set of gallows. There are 3 bodies hanging, with no one around 
+        to tell of what they did to deserve this. You can smell rotting flesh, and look ahead in horror as their carcasses slowly spin around in the wind. """
     
 class church(MapTile):
     def intro_text(self):
-        return """"""
+        return """You now stand in front of the villages church. It's the tallest building in the village, and is adorned by a white cross at the top. You can hear 
+        the bell ringing, and it appears it is time for the village to awake and church to start. """
     
 class proctorsHouse(MapTile):
     def intro_text(self):
-        return """"""
-    
+        if visited_gallows == True:
+            return """You turn to a well built wooden house. When you ask a passerby who it belongs to, they quietly whisper 'John Proctor', and then quickly 
+        scurry away. You interpret that he might have been one of the hanged """
+        else:
+            return """You turn to a well built wooden house. When you ask a passerby who it belongs to, they quietly whisper 'John Proctor', and then quickly 
+        scurry away. You think he probably isn't very well respected in the village. """
 class oldRoad(MapTile):
     def intro_text(self):
-        return """"""
+        return """You turn away from the church, and down an old road. It's made of dirt, and isn't very well worn. It looks like you're one of the first people to use it, 
+        but it seems like the children from the puritan village play near it, as there are plenty of tiny footprints. """
     
 class deism(MapTile):
     def intro_text(self):
