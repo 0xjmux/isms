@@ -54,7 +54,7 @@ class proctorsHouse(MapTile):
         
         output = """You approach a very traditional looking house, made completely out of logs. It's well built, and has a tall chimney that sticks up out of the roof. """
         
-        if visited_gallows = True:
+        if visited_gallows:
             output += "You wonder if this was the house of one of the men who were hung in the gallows."
             
         return output

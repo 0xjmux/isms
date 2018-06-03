@@ -12,6 +12,7 @@ def play():
     player = Player()
     while player.is_alive() and not player.victory:
         room = world.tile_at(player.x, player.y)
+        print(room)
         print(room.intro_text())
         room.modify_player(player)
         if player.is_alive() and not player.victory:
@@ -40,7 +41,7 @@ def get_available_actions(room, player):
     if isinstance(room, world.TraderTile):
         action_adder(actions, 't', player.trade, "Trade")
         
-    if isinstance(room, world.church):
+    if isinstance(room, world.church):  #need to add individual dialogue options for each location where dialogue is availible
         action_adder(actions, 'd', )
         
     if isinstance(room, world.EnemyTile) and room.enemy.is_alive():
