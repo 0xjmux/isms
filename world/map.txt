@@ -1,0 +1,18 @@
+	startTile	
+deadEnd	puritanVillage	gallows
+	church	proctorsHouse
+	oldRoad	
+	deism	deadEnd
+	benFranklin	
+oldForest	WashingtonSpeech	Battlefield
+romanticism		
+romanticismHouse	sideExit	deadEnd
+	RealismTown	
+deadEnd	smallCafe	modernism
+		MarxRally
+westEgg	multiplePerspectives	HarlemRenaissance
+gatsby		deadEnd
+trainStation	zeitgeist	
+	existence	museum
+		carousel
+		A21
