@@ -91,4 +91,4 @@ class Player:
 
     def dialogue(self):
         d = world.tile_at(self.x, self.y)
-        room.check_if_dialogue(self)
+        d.check_if_dialogue(self)

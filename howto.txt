@@ -1,0 +1,6 @@
+#adding dialogue
+add dialogue isinstance to game.py
+add dialogue function to player.py 
+add actual dialogue in a class to world.py
+
+that should be it
