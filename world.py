@@ -2,7 +2,6 @@ import enemies
 import npc
 import random
 
-
 class MapTile:
     def __init__(self, x, y):
         self.x = x
@@ -284,8 +283,14 @@ class VictoryTile(MapTile):
 
 start_tile_location = None          #some bullshit I added to make this spaghetti code (not) work
 world_map = []
+<<<<<<< HEAD
 string_to_class_map = {}
  
+=======
+
+string_to_class_map = {"startTile": startTile,
+                       "puritanVillage": puritanVillage}
+>>>>>>> 6d36196a9d02d5f4f302e29b00085e78768b7091
  
 def load_tiles():
     """Parses a file that describes the world space into the _world object"""
@@ -302,10 +307,8 @@ def load_tiles():
                 global start_tile_location
                 start_tile_location = (x, y) 
                 #print(start_tile_location)
-            row.append(tile_name if tile_name else None)
+            row.append(string_to_class_map[tile_name](x, y) if tile_name else None)
         world_map.append(row)
-
-
 
 
 
@@ -365,7 +368,6 @@ def tile_at(x, y):
     if x < 0 or y < 0:
         return None
     try:
-        
         return world_map[y][x]
     except IndexError:
         return None
