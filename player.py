@@ -88,3 +88,7 @@ class Player:
     def trade(self):
         room = world.tile_at(self.x, self.y)
         room.check_if_trade(self)
+
+    def dialogue(self):
+        d = world.tile_at(self.x, self.y)
+        room.check_if_dialogue(self)

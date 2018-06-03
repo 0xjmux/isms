@@ -13,6 +13,14 @@ class MapTile:
 
     def modify_player(self, player):
         pass
+    
+    def dialogue(self):
+        pass
+    
+        
+
+###BOOL DEFINITIONS
+visited_gallows = False
 
 
 class startTile(MapTile):
@@ -28,23 +36,34 @@ class puritanVillage(MapTile):
 
 class deadEnd(MapTile):
     def intro_text(self):
-        return """"""
+        return """Oops! You seem to have ended up in a dead end. It looks like there's no way out other than the way you came in. """""
 
 class gallows(MapTile):
     def intro_text(self):
-        return """"""
+        visited_gallows = True
+        return """You approach the end of the puritan village, and see some newly erected gallows. There's 3 figures hanging off of it, and another one 
+        covered in heavy bricks. You wonder what crimes these people committed to end up this way, as their bodies slowly spin in the breeze. """
     
 class church(MapTile):
     def intro_text(self):
-        return """"""
-    
+        return """The tallest building in the village is the church, and it's at the very end of the town. The bell is ringing, and the church seems to be just getting out. 
+        People pour out, dressed in very traditional clothes. """
+    ###################################ADD DIALOG FUNCTION
 class proctorsHouse(MapTile):
     def intro_text(self):
-        return """"""
+        
+        output = """You approach a very traditional looking house, made completely out of logs. It's well built, and has a tall chimney that sticks up out of the roof. """
+        
+        if visited_gallows = True:
+            output += "You wonder if this was the house of one of the men who were hung in the gallows."
+            
+        return output
     
 class oldRoad(MapTile):
     def intro_text(self):
-        return """"""
+        return """You turn away from the church, and down an old road. It's made of dirt, and isn't very well worn. It looks like you're one of the first people to use it, 
+        but it seems like the children from the puritan village play near it, as there are plenty of tiny footprints. """
+
     
 class deism(MapTile):
     def intro_text(self):
@@ -279,7 +298,7 @@ def load_tiles():
             #print(tile_name)    #for when I'm having problems with this stupid ass function
             if tile_name == 'startTile':
                 global start_tile_location
-                start_tile_location = (x, y)    #WHY DON'T YOU JUST ASSIGN IT 
+                start_tile_location = (x, y) 
                 #print(start_tile_location)
             row.append(tile_name if tile_name else None)
         world_map.append(row)
@@ -344,6 +363,15 @@ def tile_at(x, y):
     if x < 0 or y < 0:
         return None
     try:
+        
         return world_map[y][x]
     except IndexError:
         return None
+
+#def tile_exists(x, y):
+    #"""Returns the tile at the given coordinates or None if there is no tile.
+    #:param x: the x-coordinate in the worldspace
+    #:param y: the y-coordinate in the worldspace
+    #:return: the tile at the given coordinates or None if there is no tile
+    #"""
+    #return _world.get((x, y))
