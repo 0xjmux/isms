@@ -137,25 +137,27 @@ class MarxRally(MapTile):   #no values, anti-traditionalism, people make their o
 class westEgg(MapTile):   #“So we beat on, boats against the current, borne back ceaselessly into the past.” - reflection on pointlessness of life, how we’ll never win, but we keep on trying. 
 
     def intro_text(self):
-        return """As you beat on through the city, you find yourself on Long Island, near a place called West Egg. You meet a handsome man, along with a shorter man who appears to be a 
-        writer, """
+        return """As you beat on through the city, against waves of traffic, you find yourself on Long Island, near a place called West Egg. You meet a handsome man, who introduces himself
+        as F. Scott Fitzgerald."""
     
     
 class multiplePerspectives(MapTile):  #single story can be told from multiple perspectives
     def intro_text(self):
-        return """"""
+        return """As you walk around the town, you notice that different buildings and artworks look very different from varying perspectives. You wonder if it was designed this way, or 
+        it just worked out well."""
     
 class HarlemRenaissance(MapTile):  #jazz age, black art
     def intro_text(self):
-        return """"""
+        return """As you explore the city, you stumble into a jazz club. There are black artists playing jazz, and there are plenty of interesting paintings up on the walls. People are 
+        writing poetry at the tables. This area of New York seems to be a mecca for African-American culture. """
     
 class gatsby(MapTile):
     def intro_text(self):
-        return """"""
+        return """As you walk out of the jazz club, a Golden Rolls Royce darts past you, weaving through traffic with 3 passengers in the back. """
     
 class trainStation(MapTile):
     def intro_text(self):
-        return """"""
+        return """As you exit the area of Long Island, you saunter over to the train station and catch a train into Manhattan. """
     
 class zeitgeist(MapTile):
     def intro_text(self):

@@ -184,3 +184,26 @@ class Player:
                       "help humans understand more about the world. ")
             else:
                 print("Invalid choice!")        
+        
+    def dialogueFitzgerald(self):
+        print("Well how do you do")
+        
+        while True:
+            print(" - Where is this? (1)\n - What do you do? (2)\n - What are your beliefs? (3)\n - Why was this way of thinking created? (4) \n - Quit(q)")
+            user_input = input()
+            if user_input in ['Q', 'q']:
+                print("Farewell, old sport")
+                return
+            elif user_input in ['1']:
+                print("This is West egg, or rather, the western part of Long Island in New York. New York was the center of the Jazz age, which is something I took a big part in. ")
+            elif user_input in ['2']:
+                print("I'm a writer. I've written books such as The Great Gatsby, which wasn't really recognized in my time but became widely regarded as one of the bests works of "
+                      "American literature after my death. ")
+            elif user_input in ['3']:
+                print("Disillusionment is an important part of life, as well as the importance of the individual. Modernists feel an anxiety regarding the past, and reflect ideas of "
+                      "the breakdown of cultural norms as well as collectivism vs individualism in texts. ")            
+            elif user_input in ['4']:
+                print("Modernism was formed as a reaction to cultural relativism, as we believe that there should be only one reality. Past generations believed that people made their own "
+                      "meaning in the world, but we believe that there is a single, objective reality that encompasses all humans. ")
+            else:
+                print("I'm not sure what you said, old sport")          
