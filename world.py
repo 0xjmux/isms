@@ -25,7 +25,7 @@ washingtonSpeech = False
 class startTile(MapTile):
     def intro_text(self):
         return """
-        You find yourself on the edge of the atlantic ocean. To the south, you can see a small village, with what seem to be pilgrims. 
+        You find yourself on the edge of the Atlantic ocean. To the south, you can see a small village, with what seem to be pilgrims. 
         """
 
 class puritanVillage(MapTile):
@@ -95,19 +95,17 @@ class oldForest(MapTile):
     
 class romanticism(MapTile):
     def intro_text(self):
-        return """"""
+        return """You finally come to a small gap in the trees. A small cottage lies ahead of you, with a thatched roof and a middle-aged man watering some plants. You approach him, and he
+        turns to you as if to tell you something. """
     
 class romanticismHouse(MapTile):
     def intro_text(self):
-        return """"""
+        return """Inside the house, there is fancy design, and the walls are adorned with bricks. There are bright white curtains, and an intricate fireplace, all surrounded by wooden furniture. """
     
 class sideExit(MapTile):
     def intro_text(self):
-        return """"""
-    
-class deadEnd(MapTile):
-    def intro_text(self):
-        return """"""
+        return """You exit through the side door of the house, and start walking on the only other path out of the small break in the woods. It's dawn, and the sunrise through the trees gives a warm 
+        aesthetic."""
     
 class RealismTown(MapTile):
     def intro_text(self):
@@ -164,7 +162,7 @@ class carousel(MapTile):
     
 class A21(MapTile):
     def intro_text(self):
-        return """"""
+        return """Wow, you've made it to the end! Mrs. McCauley stands in her room, giving a lecture on the next philosphy. \n You've gained knawledge"""
     
   
 #class EnemyTile(MapTile):

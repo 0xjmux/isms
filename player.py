@@ -4,11 +4,10 @@ import world
 
 class Player:
     def __init__(self):
-        self.inventory = [items.Rock(),
-                          items.Dagger(),
+        self.inventory = [items.Dagger(),
                           items.CrustyBread()]
-        self.x = world.start_tile_location[0]      ###THIS SHIT IS CAUSING SOME FUCKING PROBLEMS FIX IT DUMBASS
-        self.y = world.start_tile_location[1]       #so, it's a tuple. The numbers are indicies, and somehow it's reading it as a null
+        self.x = world.start_tile_location[0]      
+        self.y = world.start_tile_location[1]       
         self.hp = 100
         self.gold = 5
         self.victory = False
@@ -132,4 +131,56 @@ class Player:
             elif user_input in ['4']:
                 print("Clockwork religion is the belief that god created the earth and then left us to our own devices. As such, it is important for humans to be independent so that we can decide our own fate. ")
             else:
-                print("Invalid choice!")            
+                print("Invalid choice!") 
+                
+                
+    def dialogueIrving(self):
+        print("Well how do you do")
+        
+        while True:
+            print(" - Where are we? (1)\n - Who are you? (2)\n - What do you believe in? (3)\n - How did you view literature? (4) \n - Quit(q)")
+            user_input = input()
+            if user_input in ['Q', 'q']:
+                print("farewell")
+                return
+            elif user_input in ['1']:
+                print("We're in Romanticism, a reflection of the more innovative and creative side of people.")
+            elif user_input in ['2']:
+                print("I'm Washington Irving, an American short story writer and essayist. I'm originally from New York, but I'm out here for a break from the city. ")
+            elif user_input in ['3']:
+                print("We're believers in Romanticism, an idealogy that focuses on the emotional and imaginitive side of people. We belive our ancesters were too boring with their"
+                      "rationalistic ways, and always making decisions just because they made sense. The only real way to live is to be emotional and optimistic, so that you make "
+                      "the decisions you want to, not the ones you think are more rational. We get plenty of new ideas and perspectives from immigrants, and believe that the mingling of"
+                      "races is beneficial to all. ")            
+            elif user_input in ['4']:
+                print("We viewed literature as an escape from reality. We belived in the importance of the imagination, and literature allows people to express that. We also viewed the "
+                      "frontier as a supreme opportunity, as it gave people the ability to express their true selves. We view the world as mysterious, and believe that it is impossible to know"
+                      "everything. We believe that everyone deserves equal opportunity and education, which can come from literature. ")
+            else:
+                print("Invalid choice!")      
+                
+                
+    def dialogueTwain(self):
+        print("Well how do you do")
+        
+        while True:
+            print(" - Where are we? (1)\n - Who are you? (2)\n - What do you believe in? (3)\n - How did you view literature? (4) \n - Quit(q)")
+            user_input = input()
+            if user_input in ['Q', 'q']:
+                print("farewell")
+                return
+            elif user_input in ['1']:
+                print("We're in Romanticism, a reflection of the more innovative and creative side of people.")
+            elif user_input in ['2']:
+                print("I'm Mark Twain, but my real name is Samuel Clemens. I'm an american writer and publisher,  ")
+            elif user_input in ['3']:
+                print("We're believers in Romanticism, an idealogy that focuses on the emotional and imaginitive side of people. We belive our ancesters were too boring with their"
+                      "rationalistic ways, and always making decisions just because they made sense. The only real way to live is to be emotional and optimistic, so that you make "
+                      "the decisions you want to, not the ones you think are more rational. We get plenty of new ideas and perspectives from immigrants, and believe that the mingling of"
+                      "races is beneficial to all. ")            
+            elif user_input in ['4']:
+                print("We viewed literature as an escape from reality. We belived in the importance of the imagination, and literature allows people to express that. We also viewed the "
+                      "frontier as a supreme opportunity, as it gave people the ability to express their true selves. We view the world as mysterious, and believe that it is impossible to know"
+                      "everything. We believe that everyone deserves equal opportunity and education, which can come from literature. ")
+            else:
+                print("Invalid choice!")        

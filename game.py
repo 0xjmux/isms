@@ -41,8 +41,10 @@ def get_available_actions(room, player):
         
     if isinstance(room, world.church):  #need to add individual dialogue options for each location where dialogue is availible
         action_adder(actions, 'd', player.dialogueChurch, "Talk to child")
-    if isinstance(room, world.benFranklin):  #need to add individual dialogue options for each location where dialogue is availible
+    if isinstance(room, world.benFranklin): 
         action_adder(actions, 'd', player.dialogueBen, "Talk to Ben Franklin")    
+    if isinstance(room, world.romanticism):  
+        action_adder(actions, 'd', player.dialogueIrving, "Talk to Washington Irving")        
     
         
     #if isinstance(room, world.EnemyTile) and room.enemy.is_alive():
