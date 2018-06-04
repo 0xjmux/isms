@@ -113,3 +113,23 @@ class Player:
                 
             else:
                 print("Invalid choice!")        
+    def dialogueBen(self):
+        print("Well how do you fare?")
+        print("It's a pleasure to meet you, brave traveler. What can I tell you about our wonderful village?")
+        while True:
+            print(" - Where are we? (1)\n - Who are you? (2)\n - What do you believe in? (3)\n - What is clockwork religion? (4) \n - Quit(q)")
+            user_input = input()
+            if user_input in ['Q', 'q']:
+                print("fare thee well!")
+                return
+            elif user_input in ['1']:
+                print("We're in Philadelphia, Pennsylvania. This is a place of great thinking, and there are many great minds here planning for the end of the current revolutionary war.  ")
+            elif user_input in ['2']:
+                print("Why, I'm Ben Franklin. I'm a postmaster, scientist and inventor, among other things.  ")
+            elif user_input in ['3']:
+                print("We're deists, believing in the prolific use of rational and logical thought in order to understand the natural world. We believe that god can be found in the natural world, "
+                      "and that people should have free will and independence. We believe that the separation of church and state is essential, along with the fact that humans are inherently good. ")            
+            elif user_input in ['4']:
+                print("Clockwork religion is the belief that god created the earth and then left us to our own devices. As such, it is important for humans to be independent so that we can decide our own fate. ")
+            else:
+                print("Invalid choice!")            

@@ -20,7 +20,7 @@ class MapTile:
 
 ###BOOL DEFINITIONS
 visited_gallows = False
-
+washingtonSpeech = False
 
 class startTile(MapTile):
     def intro_text(self):
@@ -46,7 +46,7 @@ class gallows(MapTile):
 class church(MapTile):
     def intro_text(self):
         return """The tallest building in the village is the church, and it's at the very end of the town. The bell is ringing, and the church seems to be just getting out. 
-        People pour out, dressed in very traditional clothes. """
+        People pour out, dressed in very traditional clothes. A teenage girl approaches you. """
     ###################################ADD DIALOG FUNCTION
 class proctorsHouse(MapTile):
     def intro_text(self):
@@ -66,23 +66,32 @@ class oldRoad(MapTile):
     
 class deism(MapTile):
     def intro_text(self):
-        return """"""
+        return """As you come to the end of the old road, you come into a newer looking village. It's laid out very rationally, with a town square 
+        and houses, but there isn't a church to be seen. This is quite a depart from the last village. A little further along you see an older man waiting. 
+        """
     
 class benFranklin(MapTile):
     def intro_text(self):
-        return """"""
+        return """Upon much suprise, you find that that older man was Ben Franklin. He looks like he wants to talk to you. """
     
 class WashingtonSpeech(MapTile):
     def intro_text(self):
-        return """"""
+        if washingtonSpeech:
+            return """As you walk past Ben Franklin, you can see George Washington standing upon a wooden stage, in the center of the town. He's in the middle of giving a battle speech to his 
+            soldiers, and as you stand at the back of the crowd you catch the last few words. He's saying something about the need for rationalism and independence, along with the necessity of the need of separation of church and state. 
+            The soldiers walk to the east, towards what you assume is the battlefield. """
+        else:
+            return """This appears to be an empty ampitheater. You can hear some gunshots to the east, piercing through the summer's breeze. """
     
 class Battlefield(MapTile):
     def intro_text(self):
-        return """"""
+        return """As you enter this battlefield, you see Washington's army taking a stand against the redcoats. Both sides are firing against each other, and to avoid getting hit you crouch behind a cart filled to the brim with hay. """
     
 class oldForest(MapTile):
     def intro_text(self):
-        return """"""    
+        return """As you walk away from the deist town, you enter a looming forest. As you trek through it turns to night, and you feel the piercing gaze of eyes glaring at you from every 
+        corner, but you can't see anything when you look. Eventually, a strange figure with a pumpkin for a head runs out of the trees in from of you, dragging the body of some poor soul. You
+        carry on, ever wary of what is ahead. """    
     
 class romanticism(MapTile):
     def intro_text(self):
