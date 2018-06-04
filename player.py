@@ -206,4 +206,27 @@ class Player:
                 print("Modernism was formed as a reaction to cultural relativism, as we believe that there should be only one reality. Past generations believed that people made their own "
                       "meaning in the world, but we believe that there is a single, objective reality that encompasses all humans. ")
             else:
-                print("I'm not sure what you said, old sport")          
+                print("I'm not sure what you said, old sport")         
+                
+                
+    def dialogueCaulfield(self):
+        print("The boy greets you with a disinterested look on his face.")
+        
+        while True:
+            print(" - Who are you? (1)\n - Hey, would you happen to know where the ducks go in the winter? (2)\n - Why does everyone look so depressed? (3)\n - How did you people start thinking this way? (4) \n - Quit(q)")
+            user_input = input()
+            if user_input in ['Q', 'q']:
+                print("Whatever, phony")
+                return
+            elif user_input in ['1']:
+                print("I'm Holden Caulfield, and this is my kid sister, Phoebe")
+            elif user_input in ['2']:
+                print("What do you mean kid? Seriously?")
+            elif user_input in ['3']:
+                print("We're existentialists. Everyone is responsible for their own actions, along with everything that happens to them. It's everyone's individual fault for the way "
+                      "the world is, who they are, and the way they deal with it. ")            
+            elif user_input in ['4']:
+                print("We've learned from philosophers like Friedrich Nietzche and Søren Kierkegaard, along with our own musings, that life is meaningless. We all have free will, "
+                      "and we all determine our own purpose. It's essential to create a purpose for yourself in order to avoid meaningless, which changes your nature and identity. ")
+            else:
+                print("I'm not sure what you said. It was probably something phony. ")          
