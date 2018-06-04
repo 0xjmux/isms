@@ -21,6 +21,7 @@ class MapTile:
 ###BOOL DEFINITIONS
 visited_gallows = False
 washingtonSpeech = False
+marxSpeech = False
 
 class startTile(MapTile):
     def intro_text(self):
@@ -118,22 +119,33 @@ class smallCafe(MapTile):
     
 class modernism(MapTile):
     def intro_text(self):
-        return """"""
+        return """As you walk out of the cafe, you stroll through the rest of the town, and eventually make your way to the outskirts. You venture out onto the road again, but this time it's well
+        paved and is brightly lit byb streetlamps. As you stroll along, you make your way into the next town. The buildings in this town are futuristic, with intricate design and tall, shiny exteriors. """
     
-class MarxRally(MapTile):
+class MarxRally(MapTile):   #no values, anti-traditionalism, people make their own meaning
+    def intro_text(self):
+        
+        if marxSpeech:
+            marxSpeech = True
+            return """As you walk into the town, a bearded man is excitedly lecturing to a crowd. As you approach, you recognize him as Karl Marx. Again, you only catch the end of the 
+            speech, but you hear him lecture that humans have no intrinsic values, and anti-traditionalism is important. He tells the crowd that people make their own meaning, and it is
+            important to band together in order to overcome life's challenges. As the speech ends, Marx retreats into the back of the stage. People disperse, and you eventually find yourself in an 
+            empty town center. """
+        else:
+            return """You find yourself in an almost empty town center. It looks futuristic, and it appears that there was a speech here a while ago. """
+    
+class westEgg(MapTile):   #“So we beat on, boats against the current, borne back ceaselessly into the past.” - reflection on pointlessness of life, how we’ll never win, but we keep on trying. 
+
+    def intro_text(self):
+        return """As you beat on through the city, you find yourself on Long Island, near a place called West Egg. You meet a handsome man, along with a shorter man who appears to be a 
+        writer, """
+    
+    
+class multiplePerspectives(MapTile):  #single story can be told from multiple perspectives
     def intro_text(self):
         return """"""
     
-class westEgg(MapTile):
-    def intro_text(self):
-        return """"""
-    
-    
-class multiplePerspectives(MapTile):
-    def intro_text(self):
-        return """"""
-    
-class HarlemRenaissance(MapTile):
+class HarlemRenaissance(MapTile):  #jazz age, black art
     def intro_text(self):
         return """"""
     
