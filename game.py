@@ -12,7 +12,6 @@ def play():
     player = Player()
     while player.is_alive() and not player.victory:
         room = world.tile_at(player.x, player.y)
-        print(room)
         print(room.intro_text())
         room.modify_player(player)
         if player.is_alive() and not player.victory:
@@ -38,23 +37,22 @@ def get_available_actions(room, player):
     print("Choose an action: ")
     if player.inventory:
         action_adder(actions, 'i', player.print_inventory, "Print inventory")
-    if isinstance(room, world.TraderTile):
-        action_adder(actions, 't', player.trade, "Trade")
+    
         
     if isinstance(room, world.church):  #need to add individual dialogue options for each location where dialogue is availible
-        action_adder(actions, 'd', )
+        action_adder(actions, 'd', player.dialogueChurch, "Talk to child")
         
-    if isinstance(room, world.EnemyTile) and room.enemy.is_alive():
-        action_adder(actions, 'a', player.attack, "Attack")
-    else:
-        if world.tile_at(room.x, room.y - 1):
-            action_adder(actions, 'n', player.move_north, "Go north")
-        if world.tile_at(room.x, room.y + 1):
-            action_adder(actions, 's', player.move_south, "Go south")
-        if world.tile_at(room.x + 1, room.y):
-            action_adder(actions, 'e', player.move_east, "Go east")
-        if world.tile_at(room.x - 1, room.y):
-            action_adder(actions, 'w', player.move_west, "Go west")
+    #if isinstance(room, world.EnemyTile) and room.enemy.is_alive():
+        #action_adder(actions, 'a', player.attack, "Attack")
+
+    if world.tile_at(room.x, room.y - 1):
+        action_adder(actions, 'n', player.move_north, "Go north")
+    if world.tile_at(room.x, room.y + 1):
+        action_adder(actions, 's', player.move_south, "Go south")
+    if world.tile_at(room.x + 1, room.y):
+        action_adder(actions, 'e', player.move_east, "Go east")
+    if world.tile_at(room.x - 1, room.y):
+        action_adder(actions, 'w', player.move_west, "Go west")
     if player.hp < 100:
         action_adder(actions, 'h', player.heal, "Heal")
 

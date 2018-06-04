@@ -92,3 +92,24 @@ class Player:
     def dialogue(self):
         d = world.tile_at(self.x, self.y)
         d.check_if_dialogue(self)
+        
+    def dialogueChurch(self):
+        print("Well how do you fare?")
+        answer = input()
+        print("Well that's nice to hear. What are you wondering about his here village?")
+        while True:
+            print(" - What is it (1)\n - Is there anywhere else I should explore? (2)\n  - Who are you? (3)\n - Quit(q)")
+            user_input = input()
+            if user_input in ['Q', 'q']:
+                print("fare thee well!")
+                return
+            elif user_input in ['1']:
+                print("This is our puritan village, here in Salem Massachussetts. It was founded in 1626, as a place for our ancestors to escape "
+                      "religious persecution. ")
+            elif user_input in ['2']:
+                print("Yeah, up the road over there there's a new colony being formed. The kids are really taking an interest in it, but the adults are shunning away from it. ")
+            elif user_input in ['3']:
+                print("I'm Abigail Williams. ")            
+                
+            else:
+                print("Invalid choice!")        

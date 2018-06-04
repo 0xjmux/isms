@@ -205,7 +205,7 @@ class VictoryTile(MapTile):
         
         """
 
-
+ 
 #class FindGoldTile(MapTile):
     #def __init__(self, x, y):
         #self.gold = random.randint(1, 50)
@@ -283,14 +283,39 @@ class VictoryTile(MapTile):
 
 start_tile_location = None          #some bullshit I added to make this spaghetti code (not) work
 world_map = []
-<<<<<<< HEAD
-string_to_class_map = {}
- 
-=======
+
 
 string_to_class_map = {"startTile": startTile,
-                       "puritanVillage": puritanVillage}
->>>>>>> 6d36196a9d02d5f4f302e29b00085e78768b7091
+                       "puritanVillage": puritanVillage,
+                       "deadEnd":deadEnd,
+                       "gallows":gallows,
+                       "church":church,
+                       "proctorsHouse":proctorsHouse,
+                       "oldRoad":oldRoad,
+                       "deism":deism,
+                       "benFranklin":benFranklin,
+                       "oldForest":oldForest,
+                       "WashingtonSpeech":WashingtonSpeech,
+                       "Battlefield":Battlefield,
+                       "romanticism":romanticism,
+                       "romanticismHouse":romanticismHouse,
+                       "sideExit":sideExit,
+                       "RealismTown":RealismTown,
+                       "smallCafe":smallCafe,
+                       "modernism":modernism,
+                       "MarxRally":MarxRally,
+                       "westEgg":westEgg,
+                       "multiplePerspectives":multiplePerspectives,
+                       "HarlemRenaissance":HarlemRenaissance,
+                       "gatsby":gatsby,
+                       "trainStation":trainStation,
+                       "zeitgeist":zeitgeist,
+                       "existence":existence,
+                       "museum":museum,
+                       "carousel":carousel,
+                       "A21":A21
+                       }
+
  
 def load_tiles():
     """Parses a file that describes the world space into the _world object"""
