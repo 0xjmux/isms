@@ -109,11 +109,12 @@ class sideExit(MapTile):
     
 class RealismTown(MapTile):
     def intro_text(self):
-        return """"""    
+        return """As you apporach the next village, you notice that it is realistically depicted, and significantly more advanced, with streetlights, and other facilities. Everything is 
+        realistically portrayed, exactly as it is seen. There's a small cafe to your south, with a dim streetlight and some light chatter carrying away from the patrons there. """    
     
 class smallCafe(MapTile):
     def intro_text(self):
-        return """"""
+        return """As you enter the cafe, a tall well dressed main who you recognize as Mark Twain, or rather Samuel Clemens, greets you as you enter. """
     
 class modernism(MapTile):
     def intro_text(self):

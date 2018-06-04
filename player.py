@@ -164,23 +164,23 @@ class Player:
         print("Well how do you do")
         
         while True:
-            print(" - Where are we? (1)\n - Who are you? (2)\n - What do you believe in? (3)\n - How did you view literature? (4) \n - Quit(q)")
+            print(" - Where are we? (1)\n - Who are you? (2)\n - What do you believe in? (3)\n - Why was this way of thinking created? (4) \n - Quit(q)")
             user_input = input()
             if user_input in ['Q', 'q']:
                 print("farewell")
                 return
             elif user_input in ['1']:
-                print("We're in Romanticism, a reflection of the more innovative and creative side of people.")
+                print("This is realism, an accurate reflection of reality. We believe in pragmatism, and that the morality of the individual is essential. The equality commonly found in "
+                      "democratic systems is also incredible important, along with human's ability to control our own destinies. ")
             elif user_input in ['2']:
-                print("I'm Mark Twain, but my real name is Samuel Clemens. I'm an american writer and publisher,  ")
+                print("I'm Mark Twain, but my real name is Samuel Clemens. I'm an American writer and publisher, most famous for some of my novels, which include the Adventures of Huckleberry Finn and the "
+                      "Adventures of Tom Sawyer. ")
             elif user_input in ['3']:
-                print("We're believers in Romanticism, an idealogy that focuses on the emotional and imaginitive side of people. We belive our ancesters were too boring with their"
-                      "rationalistic ways, and always making decisions just because they made sense. The only real way to live is to be emotional and optimistic, so that you make "
-                      "the decisions you want to, not the ones you think are more rational. We get plenty of new ideas and perspectives from immigrants, and believe that the mingling of"
-                      "races is beneficial to all. ")            
+                print("We believe that everything should be shown as it is. We got to this way of thinking because our ancestors did everything based on emotion, instead of logical "
+                      "thought. We focus on different things than our ancestors, such as the plight of the new urban poor population and people's ordinary lives. We think that portraying"
+                      "the human struggle in print is essential to life. Each person should have an equal voice, and should be independent to make their own decisions. ")            
             elif user_input in ['4']:
-                print("We viewed literature as an escape from reality. We belived in the importance of the imagination, and literature allows people to express that. We also viewed the "
-                      "frontier as a supreme opportunity, as it gave people the ability to express their true selves. We view the world as mysterious, and believe that it is impossible to know"
-                      "everything. We believe that everyone deserves equal opportunity and education, which can come from literature. ")
+                print("We started thinking this way as the result of many failed revolutions in the 1840s. We thought that showing worldwide events and conditions in a harsh light would "
+                      "help humans understand more about the world. ")
             else:
                 print("Invalid choice!")        
