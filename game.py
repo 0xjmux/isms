@@ -35,20 +35,22 @@ def choose_action(room, player):
 def get_available_actions(room, player):
     actions = OrderedDict()
     print("Choose an action: ")
-    if player.inventory:
-        action_adder(actions, 'i', player.print_inventory, "Print inventory")
-    
         
     if isinstance(room, world.church):  #need to add individual dialogue options for each location where dialogue is availible
         action_adder(actions, 'd', player.dialogueChurch, "Talk to child")
     if isinstance(room, world.benFranklin): 
         action_adder(actions, 'd', player.dialogueBen, "Talk to Ben Franklin")    
     if isinstance(room, world.romanticism):  
-        action_adder(actions, 'd', player.dialogueIrving, "Talk to Washington Irving")        
-    
+        action_adder(actions, 'd', player.dialogueIrving, "Talk to Washington Irving") 
         
-    #if isinstance(room, world.EnemyTile) and room.enemy.is_alive():
-        #action_adder(actions, 'a', player.attack, "Attack")
+    if isinstance(room, world.smallCafe):  
+        action_adder(actions, 'd', player.dialogueTwain, "Talk to Mark Twain (Samuel Clemens)")
+        
+    if isinstance(room, world.westEgg):  
+        action_adder(actions, 'd', player.dialogueFitzgerald, "Talk to F. Scott Fitzgerald") 
+        
+    if isinstance(room, world.museum):  
+        action_adder(actions, 'd', player.dialogueCaulfield, "Talk to Holden Caulfield")      
 
     if world.tile_at(room.x, room.y - 1):
         action_adder(actions, 'n', player.move_north, "Go north")
