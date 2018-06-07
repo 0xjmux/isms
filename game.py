@@ -4,10 +4,7 @@ import world
 
 
 def play():
-    print("Welcome to the AP Lang philosophies text based adventure game!\n"
-          "This is a program written by PwnKitteh (Jacob Bokor) as an AP Lang final project. This is my first foray into this type of game, so be prepared for bugs. "
-          "Your current options will be provided to you when in game. You play as a time traveling explorer, trekking through America across the ages. "
-          "Good Luck!")
+    print("Welcome to the AP Lang philosophies text based adventure game!\n This is a program written by Jacob Bokor as an AP Lang final project. Your current options will be provided to you when in game. You play as a time traveling explorer, trekking through America across the ages. Good Luck!")
     world.load_tiles()
     player = Player()
     while player.is_alive() and not player.victory:

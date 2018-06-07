@@ -27,7 +27,7 @@ class startTile(MapTile):
 
 class puritanVillage(MapTile):
     def intro_text(self):
-        return """As you approach the village, it turns out that these settlers are puritans, not pilgrims. They appear to be approaching the tallest building in the village, which appears to be a church. """
+        return """As you approach the village, it turns out that these settlers are puritans, not pilgrims. They are approaching the tallest building in the village, which appears to be a church. """
 
 class deadEnd(MapTile):
     def intro_text(self):
@@ -37,7 +37,7 @@ class gallows(MapTile):
     def intro_text(self):
         global visited_gallows
         visited_gallows = True
-        return """You approach the end of the puritan village, and see some newly erected gallows. There's 3 figures hanging off of it, and another one covered in heavy bricks. You wonder what crimes these people committed to end up this way, as their bodies slowly spin in the breeze. """
+        return """You approach the end of the puritan village, and see some newly erected gallows. There are 3 figures hanging from it, and another one covered in heavy bricks. You wonder what crimes these people committed to end up this way, as their bodies slowly twirl in the breeze. """
     
 class church(MapTile):
     def intro_text(self):
@@ -89,7 +89,8 @@ class romanticism(MapTile):
     
 class romanticismHouse(MapTile):
     def intro_text(self):
-        return """Inside the house, there is fancy design, and the walls are adorned with bricks. There are bright white curtains, and an intricate fireplace, all surrounded by wooden furniture. """
+        
+        return """Inside the house the walls are adorned with bricks, and are surrounded by fancy design. There are bright white curtains, and an intricate fireplace, all surrounded by wooden furniture. """
     
 class sideExit(MapTile):
     def intro_text(self):
@@ -98,7 +99,7 @@ class sideExit(MapTile):
     
 class RealismTown(MapTile):
     def intro_text(self):
-        return "As you apporach the next village, you notice that it is realistically depicted, and significantly more advanced, with streetlights, and other facilities. Everything is realistically portrayed, exactly as it is seen. There's a small cafe to your south, with a dim streetlight and some light chatter carrying away from the patrons there. "    
+        return "As you apporach the next village, you notice that it is significantly more advanced, with gas streetlamps, and other facilities. Everything is realistically portrayed, exactly as it is seen. There's a small cafe to your south, with a dim streetlight and some light chatter carrying away from the patrons there. "    
     
 class smallCafe(MapTile):
     def intro_text(self):
@@ -106,13 +107,16 @@ class smallCafe(MapTile):
     
 class modernism(MapTile):
     def intro_text(self):
-        return "As you walk out of the cafe, you stroll through the rest of the town, and eventually make your way to the outskirts. You venture out onto the road again, but this time it's well paved and is brightly lit byb streetlamps. As you stroll along, you make your way into the next town. The buildings in this town are futuristic, with intricate design and tall, shiny exteriors. "
+        
+        return "As you walk out of the cafe, you stroll through the rest of the town, and eventually make your way to the outskirts. You venture out onto the road again, but this time it's well paved and is brightly lit by electric streetlamps. As you stroll along, you make your way into the next town. The buildings in this town are futuristic, with intricate design and tall, shiny exteriors. "
     
 class MarxRally(MapTile):   #no values, anti-traditionalism, people make their own meaning
     def intro_text(self):
         global marxSpeech
         if marxSpeech == False:
             marxSpeech = True
+           
+            
             return "As you walk into the town, a bearded man is excitedly lecturing to a crowd. As you approach, you recognize him as Karl Marx. Again, you only catch the end of the speech, but you hear him lecture that humans have no intrinsic values, and anti-traditionalism is important. He tells the crowd that people make their own meaning, and it is important to band together in order to overcome life's challenges. As the speech ends, Marx retreats into the back of the stage. People disperse, and you eventually find yourself in an empty town center. "
         else:
             return """You find yourself in an almost empty town center. It looks futuristic, and it appears that there was a speech here a while ago. """
@@ -129,7 +133,9 @@ class multiplePerspectives(MapTile):  #single story can be told from multiple pe
     
 class HarlemRenaissance(MapTile):  #jazz age, black art
     def intro_text(self):
-        return """As you explore the city, you stumble into a jazz club. There are black artists playing jazz, and there are plenty of interesting paintings up on the walls. People are writing poetry at the tables. This area of New York seems to be a mecca for African-American culture. """
+        
+        
+        return """As you explore the city, you stumble into a jazz club. The music and the energy draws you in. There are black artists playing jazz, and there are plenty of interesting paintings up on the walls. People are writing poetry at the tables. You are mesmerized by the musicians and the eclectic style in which they play their instruments, seemingly making up the music as they go along, playing off of each other and giving space for each other to solo. This area of New York seems to be a mecca for African-American culture. """
     
 class gatsby(MapTile):
     def intro_text(self):
@@ -141,11 +147,12 @@ class trainStation(MapTile):
     
 class zeitgeist(MapTile):
     def intro_text(self):
-        return "As you pass through the station and out into the streets, you notice a much more modern world. Cars have replaced horse drawn carriages, and people are dressed very different. The spirit of the times has shifted, and people appear much less happy than they did before. Wars and the great depression have had a great effect on the general mood of the people, especially on the artists of the time. "
+        
+        return "As you pass through the station and out into the streets, you notice a much more modern world. Cars have replaced horse drawn carriages, and people are dressed very different. The spirit of the times has shifted, and people appear much less happy than they did before. Many have lost their jobs, lost their homes and there are long lines of idea people hoping for a hot meal or just a bowl of soup.  Wars and the great depression have had a great effect on the general mood of the people, especially on the artists of the time. "
     
 class existence(MapTile):
     def intro_text(self):
-        return """You keep walking through the town, and end up just to the west of the natural history museum. """    
+        return """You keep walking through the town, and end up just to the west of the Natural History museum. """    
 
 class museum(MapTile):
     def intro_text(self):
